@@ -5,7 +5,7 @@
  */
 
 const solution = A => {
-    if(A instanceof Array && typeof A === 'object' && (A.length > 0)){
+    if(typeof A === 'object' && A instanceof Array  && (A.length > 0)){
         const sortedA = A.sort((a,b) => a - b);
         const min = Math.ceil(sortedA[0]);
         const minPositive = Math.sign(min) === 1 ? true : false;
